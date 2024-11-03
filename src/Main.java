@@ -10,12 +10,10 @@ public class Main {
 
         while (storage1 < 2_459_000) {
             storage1 += 15_000;
-            storage1 += storage1 * 0.01;
-
             monthToGoal1++;
-        }
 
-        System.out.printf("Месяц %d, сумма накоплений равна %.2f рублей", monthToGoal1, storage1);
+            System.out.printf("\nМесяц %d, сумма накоплений равна %.2f рублей", monthToGoal1, storage1);
+        }
 
         //Задача 2
         System.out.print("\n\n");
@@ -27,18 +25,15 @@ public class Main {
             temp++;
         }
 
-        temp--;
-
         System.out.println();
 
-        while (temp >= 1) {
+        for (temp = 10; temp >= 1; temp--) {
             System.out.printf("%d ", temp);
-            temp--;
         }
 
         //Задача 3
-        int total = 10_000_000;
-        byte birthRate = 14;
+        int total = 12_000_000;
+        byte birthRate = 17;
         byte deathRate = 8;
 
         System.out.println("\n\nВысчитываем численность населения.");
@@ -103,10 +98,14 @@ public class Main {
         } while (friday <= 31);
 
         //Задача 8
+        short currentYear = 2024;
+        short start = (short) (currentYear - 200);
+        short end = (short) (currentYear + 100);
+
         System.out.print("\n\n");
 
-        for (int i = 1824; i < 2124; i++) {
-            if (i % 79 ==0){
+        for (int i = start; i < end; i++) {
+            if (i % 79 == 0) {
                 System.out.print(i + "\n");
             }
         }
